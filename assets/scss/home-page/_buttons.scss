@@ -1,0 +1,36 @@
+.buttons {
+    display: inline inline-block;
+
+    .btn {
+        padding: 7px 30px;
+        border: 2px solid $buttonDarkColor;
+        border-radius: 50px;
+        color: $buttonContentColor;
+        font-size: 11px;
+        font-family: $headerFontFamily;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:nth-of-type(2) {
+            margin: 0 10px;
+        }
+
+
+        &:hover {
+            background-color: $buttonDarkColor;
+            color: $buttonHoverContentColor;
+        }
+
+        &.active {
+            background-color: $buttonDarkColor;
+            color: $buttonHoverContentColor;
+
+            &:hover {
+                background-color: transparent;
+                color: $buttonContentColor;
+                border: 2px solid $buttonDarkColor;
+            }
+        }
+
+    }
+}

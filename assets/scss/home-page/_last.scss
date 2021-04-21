@@ -1,0 +1,64 @@
+.last {
+    width: 100%;
+    background-color: $footerBackground;
+    padding: 50px 0;
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width:992px) {
+            padding: 0 25px 0 40px;
+        }
+
+        @media(max-width:767px) {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+
+
+        .madeBy {
+            font-size: 12px;
+            font-family: $mainFontFamily;
+            color: $primaryTextColor;
+            font-weight: 200;
+
+            @media(max-width:767px) {
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: $primaryTextColor;
+
+
+                &:hover {
+                    color: $projectOverlayColor;
+                    transition: .3s;
+                }
+            }
+        }
+
+        .terms {
+            font-size: 12px;
+            font-family: $mainFontFamily;
+            color: $primaryTextColor;
+            font-weight: 200;
+
+            a {
+                color: $primaryTextColor;
+
+                &:hover {
+                    color: $projectOverlayColor;
+                    transition: .3s;
+                }
+            }
+        }
+
+
+    }
+
+}

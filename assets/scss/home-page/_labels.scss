@@ -1,0 +1,66 @@
+.labels {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+
+    @media(max-width:992px) {
+        padding: 0;
+    }
+
+
+    .box {
+        width: 25%;
+        background-origin: padding-box;
+        border: 1px solid #ededed;
+        border-top: hidden;
+        border-left: hidden;
+        padding: 50px;
+
+        @media(max-width:992px) {
+            width: 50%;
+
+            &:nth-of-type(2) {
+                border-right: hidden;
+            }
+        }
+
+        @media(max-width:767px) {
+            width: 100%;
+
+            &:nth-of-type(odd) {
+                border-right: hidden;
+            }
+        }
+
+
+        &:last-of-type {
+            border-right: hidden;
+        }
+
+        i {
+            color: $labelIconColor;
+            font-size: 50px;
+        }
+
+        h5 {
+            font-size: 14px;
+            font-family: $headerFontFamily;
+            color: $labelTitleColor;
+            margin: 25px 0 5px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 14px;
+            font-family: $mainFontFamily;
+            color: $labelTextColor;
+            line-height: 1.5;
+        }
+
+    }
+
+}

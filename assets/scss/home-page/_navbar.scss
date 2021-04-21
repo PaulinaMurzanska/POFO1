@@ -1,0 +1,336 @@
+.navigation {
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    &.move {
+
+        background-color: $footerBackground;
+        transition: .5s;
+
+        .logo {
+            visibility: hidden;
+
+        }
+
+        .container {
+            .menu-hamburger-wrap {
+                .menu {
+                    li {
+                        a {
+                            color: #ffffff;
+
+
+                        }
+
+                        &:last-of-type {
+                            margin-right: 0;
+                            padding-right: 0;
+                            border: none;
+                        }
+
+
+                    }
+                }
+
+                .hamburger {
+
+                    .hamburger-inner,
+                    .hamburger-inner::before,
+                    .hamburger-inner::after {
+                        background-color: #ffffff;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // margin-top: 15px;
+        // margin-bottom: 15px;
+        position: relative;
+
+        .logo {
+
+            z-index: 1;
+
+        }
+
+        .logo-white {
+            position: absolute;
+            left: 15px;
+            z-index: -5;
+
+        }
+
+
+
+        .menu-hamburger-wrap {
+            display: flex;
+
+            .menu {
+                display: flex;
+                flex-wrap: no-wrap;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+
+                @media(max-width:700px) {
+                    display: none;
+                }
+
+
+                li {
+
+                    width: calc(100%/6);
+                    margin: 0 20px 0 0;
+                    position: relative;
+                    // display: inline;
+                    padding: 26px 0;
+
+
+                    a {
+                        font-family: $headerFontFamily;
+                        color: #232323;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        display: block;
+
+
+                        &:hover {
+                            color: $provideTextColor;
+                        }
+                    }
+
+                    .submenu-first,
+                    .submenu-second {
+                        display: none;
+                        background-color: $contactBackgroundColor;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        padding: 20px;
+
+                        li {
+
+                            a {
+                                font-family: $headerFontFamily;
+                                color: #ffffff;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                font-weight: 200;
+                                margin-bottom: 15px;
+
+
+
+                            }
+
+                        }
+
+
+
+                        .drop {
+                            margin: 0;
+                            padding-left: 5px;
+                            ;
+
+                            li {
+                                margin: 0;
+
+                                a {
+                                    margin: 0;
+                                    text-transform: none;
+                                    line-height: 2;
+                                    margin: 0;
+                                    color: $labelTextColor;
+
+                                    display: inline;
+                                    font-size: 12px;
+
+
+                                    &:hover {
+                                        color: $provideBtnTextStart;
+                                        margin-left: 10px;
+                                        transition: 0.5s;
+                                    }
+
+
+                                }
+
+
+
+                            }
+                        }
+
+
+                    }
+
+                    .submenu-second {
+
+                        li {
+                            a {
+                                .sub-second-line {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 100%;
+
+                                    span {
+                                        width: 50%;
+                                        display: block;
+                                        font-weight: 500;
+
+                                        &:hover {
+                                            color: #ffffff;
+                                        }
+
+
+                                    }
+
+                                    a {
+                                        width: 50%;
+                                        display: block;
+                                        text-align: right;
+                                        color: $labelTextColor;
+
+                                        &:hover {
+                                            color: #ffffff;
+                                        }
+
+                                    }
+
+                                    &:hover {
+                                        color: #ffffff;
+                                        margin-left: 10px;
+                                        transition: 0.5s;
+                                    }
+
+
+                                }
+
+                            }
+
+
+
+                        }
+
+
+
+
+
+
+                    }
+
+                    &:hover {
+
+                        .submenu-first {
+                            display: flex;
+                            position: absolute;
+                            top: 100%;
+                            left: -400px;
+                            width: 900px;
+
+
+                            li {
+
+                                width: 25%;
+
+                                a {
+                                    display: block;
+
+                                }
+
+                                ul {
+                                    display: block;
+
+                                    li {
+                                        display: inline;
+                                    }
+                                }
+
+                                &:last-child {
+                                    margin-right: 0;
+                                    padding-right: 0;
+                                    border: none;
+                                }
+                            }
+                        }
+
+                        .submenu-second {
+                            display: block;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 180px;
+
+                            li {
+                                width: 100%;
+
+                                a {
+                                    text-transform: none;
+                                    line-height: 1.5;
+
+                                }
+
+                                &:last-child {
+                                    margin-right: 0;
+                                    padding-right: 0;
+                                    border: none;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+
+
+
+        }
+
+
+
+    }
+}
+
+.menu-open {
+    overflow: hidden;
+
+    .navigation {
+        .container {
+            .menu-hamburger-wrap {
+                .menu {
+                    display: block;
+                    background-color:#fff;
+                    width: 100%;
+                    padding: 20px;
+                    position: absolute;
+                    overflow-y: scroll;
+                    top: 100%;
+                    left: 0;
+
+                    li {
+                        display: block;
+
+                        .submenu-second {
+                            position: static;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}

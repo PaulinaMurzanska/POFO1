@@ -1,0 +1,67 @@
+.container {
+    position: relative;
+
+    .menu-list {
+
+        .drop {
+
+            .drop-stage1 {
+                display: none;
+                position: absolute;
+                width: 1170px;
+                top: 100px;
+                left: 0;
+                background-color: $contactBackgroundColor;
+                color: #ffffff;
+                padding: 30px;
+
+
+                .stage1 {
+                    width: 25%;
+                    text-align: left;
+                    border-right: 1px solid $numbersIconTextColor;
+                    padding: 30px;
+
+                    &:last-of-type {
+                        border-right: none;
+                    }
+
+                    span {
+                        font-family: $headerFontFamily;
+                        color: $whyUsTextcolor;
+                    }
+
+                    .drop-stage2 {
+                        margin-top: 20px;
+
+                        .stage2 {
+                            text-align: left;
+                            text-transform: none;
+                            font-weight: 200;
+                            line-height: 2;
+                            font-size: 12px;
+                            color: $primaryTextColor;
+
+                        }
+
+                    }
+
+
+                }
+            }
+
+            &:hover .drop-stage1 {
+                display: flex;
+
+
+            }
+
+
+
+
+        }
+
+
+    }
+
+}

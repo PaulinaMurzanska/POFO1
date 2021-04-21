@@ -1,0 +1,70 @@
+.menu-top {
+
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px;
+
+
+        .menu-right {
+
+            display: flex;
+
+            .menu-list {
+                display: flex;
+
+                align-items: center;
+                padding: 26px 0;
+
+
+                .list-elements {
+                    display: flex;
+                    border-right: 1px solid $labelTextColor;
+
+
+                    .drop {
+
+                        margin: 0 20px;
+                        padding: 5px 0;
+                        font-size: 12px;
+                        font-family: $headerFontFamily;
+                        color: $provideBtnTextHover;
+                        text-transform: uppercase;
+                        font-weight: 600;
+
+
+
+                    }
+                }
+            }
+
+            .search-bar {
+
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                color: $provideBtnTextHover;
+
+                .zoom {
+                    margin-right: 20px;
+
+
+                }
+
+
+            }
+
+        }
+
+
+    }
+
+}

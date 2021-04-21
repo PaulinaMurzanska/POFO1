@@ -1,0 +1,159 @@
+.blog {
+    padding: 90px 0;
+    width: 100%;
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+
+        h5 {
+            font-size: 12px;
+            color: #939393;
+            margin: 0 0 15px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        h2 {
+            @include fluid-type (20px, 32px);
+            text-align: center;
+            margin: 0 auto 50px;
+            width: 50%;
+            font-family: $headerFontFamily;
+            font-weight: 600;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+
+
+            .grid-item {
+                width: calc(100%/3);
+                padding: 0 15px;
+
+                @media (max-width: 992px) {
+                    width: 50%;
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .blog-post {
+                    .post-image {
+                        position: relative;
+
+                        a {
+                            display: block;
+
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                vertical-align: middle;
+
+                            }
+
+                            .image-overlay {
+
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                opacity: 0;
+
+                                i {
+                                    font-size: 50px;
+                                    color: #ffffff;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translateY(-50%) translateX(-50%);
+                                    position: absolute;
+
+                                }
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+                    .post-detail {
+                        height: 100%;
+                        width: 100%;
+                        padding: 45px;
+                        background-color: $testimonialsBackColor;
+                        margin: 0;
+
+                        a {
+                            font-size: 16px;
+                            font-family: $headerFontFamily;
+                            font-weight: 600;
+                            color: $publishTitleTextColor;
+                            margin: 0 0 15px;
+
+                            &:hover {
+                                color: $publishLinkColor;
+                                transition: .4s;
+                            }
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-family: $mainFontFamily;
+                            color: $publishTextColor;
+                            line-height: 1.5;
+                            margin: 15px 0 25px 0;
+                        }
+
+                        .separator {
+                            width: 100%;
+                            height: 1px;
+                            background-color: $publishBackgroundColor;
+                            margin: 20px 0;
+                        }
+
+                        .author {
+                            span {
+                                text-transform: uppercase;
+                                color: $publishAuthorcolor;
+                                font-size: 11px;
+                                font-family: $mainFontFamily;
+
+                                a {
+                                    color: $publishAuthorcolor;
+                                    font-size: 11px;
+                                    font-family: $mainFontFamily;
+                                    font-weight: 400;
+
+                                    &:hover {
+                                        color: $publishLinkColor;
+                                        transition: .4s;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+}

@@ -1,0 +1,54 @@
+.why-us {
+    width: 100%;
+    height: auto;
+    padding: 130px 0;
+    text-align: center;
+
+    .container {
+        .info {
+            width: 40%;
+            margin: 0 auto 58px;
+
+            @media(max-width:767px) {
+                width: 100%;
+            }
+
+            h6 {
+                font-size: 12px;
+                font-family: $headerFontFamily;
+                color: $whyUsTextcolor;
+                text-transform: uppercase;
+                margin: 0 0 7px;
+                font-weight: 600;
+            }
+
+            h5 {
+                @include fluid-type(20px, 32px);
+                font-family: $headerFontFamily;
+                color: $whyUsTitleColor;
+                margin: 0 0 25px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 14px;
+                font-family: $mainFontFamily;
+                color: $whyUsTextcolor;
+                line-height: 1.5;
+            }
+        }
+
+        .photo {
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+
+
+}

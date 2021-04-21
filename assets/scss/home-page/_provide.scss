@@ -1,0 +1,125 @@
+.provide {
+    background-color: $provideBackgroundColor;
+    padding: 130px 0;
+    width: 100%;
+
+    @media(max-width:992px) {
+        padding: 70px 0;
+    }
+
+
+    .container {
+        .wrap {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            @media(max-width:992px) {
+                display: block;
+            }
+
+            .photo {
+                width: 50%;
+                height: auto;
+                padding: 0 15px;
+
+                @media(max-width:992px) {
+                    width: 100%;
+                    margin: 0 auto 30px;
+                }
+
+
+
+                .clip {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                        font-size: 75px;
+                        color: $provideBtnTextStart;
+
+                        &:hover {
+                            font-size: 90px;
+                        }
+
+
+                    }
+
+                }
+
+
+            }
+
+            .info {
+                width: 50%;
+                height: auto;
+                padding: 15px 15px 15px 80px;
+
+                @media(max-width:992px) {
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    padding: 15px;
+                }
+
+                h3 {
+                    @include fluid-type (20px, 32px);
+                    font-family: $headerFontFamily;
+                    color: $provideHeaderColor;
+                    font-weight: 500;
+                    margin: 0 0 25px;
+                }
+
+                h4 {
+                    @include fluid-type (14px, 20px);
+                    font-family: $mainFontFamily;
+                    color: $provideHeaderSecondColor;
+                    margin: 0 35px 25px 0;
+                    font-weight: 200;
+                    line-height: 1.5;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-family: $mainFontFamily;
+                    color: $provideTextColor;
+                    line-height: 1.5;
+                    margin: 0 35px 0 0;
+                    font-weight: 400;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: 10px 30px;
+                    border: 2px solid $provideBtnBorderStart;
+                    text-transform: uppercase;
+                    margin: 30px 0 0;
+                    border-radius: 50px;
+                    font-size: 11px;
+                    color: $provideBtnTextStart;
+                    font-weight: 600;
+                    font-family: $headerFontFamily;
+
+                    &:hover {
+                        background-color: $provideBtnBackgroundHover;
+                        color: $provideBtnTextHover;
+                        transition: .5s;
+                    }
+                }
+
+            }
+        }
+    }
+}
